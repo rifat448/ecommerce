@@ -1,0 +1,34 @@
+.categoryMenu {
+    position: relative;
+    
+    .wrapper{
+        position: relative;
+
+        .categoryContent {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            left: - calc(0.18 * 100vw);
+            width: calc(0.18 * 100vw);
+            height: 100vh;
+            transition: all 1s ease;
+            overflow: scroll;
+            padding-top: 70px;
+        }
+
+        li{
+            display: flex;
+            align-items: flex-start;
+            list-style: none;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 2px;
+            float: left;
+        }
+    }
+    .active{
+        .categoryContent {
+            left: 0px;
+        }
+    }
+}
