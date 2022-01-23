@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.scss';
 import Header from './component/header/Header';
-import CategoryMenu from './component/categories/CategoryMenu';
-import Banner from './component/banner/Banner';
+import LandingPage from './component/landingPage/LandingPage';
+
 
 
 import { useState } from 'react';
@@ -14,14 +14,7 @@ function App() {
   return (
     <div className="App">
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <div className={`content ${menuOpen ? "active" : ""}`}>
-        <div className="leftContentBlock">
-          <CategoryMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        </div>
-        <div className="rightContentBlock">
-          <Banner />
-        </div>
-      </div>
+      <LandingPage menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
     </div>
   );
 }
